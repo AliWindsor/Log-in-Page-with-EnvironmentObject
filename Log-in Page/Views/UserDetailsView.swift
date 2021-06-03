@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct UserDetailsView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @Binding var userName:String
     @Binding var userModelData : UserModelData
      var userInformation : UserModel?
     
     var body: some View{
-        NavigationView{
+       // NavigationView{
             VStack{
                
                 if let items = userInformation{
@@ -24,19 +26,28 @@ struct LoginView: View {
                     List(items.items, id: \.self){ item in
                                 Text(item)
                     }
+                    
+                  
                 }
-       
-                NavigationLink(destination: ContentView()){
+                Button(action: {
+                    withAnimation {
+                        viewRouter.currentPage = .loginPage
+                    }
+                }) {
                     CustomButtonStyle(buttonText: "Logout")
                 }
-                .padding()
-                .navigationBarHidden(true)
-            }
-            .navigationBarHidden(true)
+       
+                /*NavigationLink(destination: ContentView()){
+                    CustomButtonStyle(buttonText: "Logout")
+                }*/
+                //.padding()
+                //.navigationBarHidden(true)
+           // }
+            //.navigationBarHidden(true)
           
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
+        //.navigationBarBackButtonHidden(true)
+       // .navigationBarHidden(true)
      
     }
 }
