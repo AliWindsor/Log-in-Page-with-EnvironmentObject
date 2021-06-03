@@ -1,0 +1,35 @@
+[
+    {
+        "username": "user",
+        "password": "pass",
+        "type": "Animals",
+        "items": ["Dog",
+                    "Cat",
+                    "Mouse",
+                    "Parrot",
+                    "Goldfish"
+        ]
+    },
+    {
+        "username": "helloworld",
+        "password": "firstprogram",
+        "type": "States",
+        "items": ["Not Running",
+                    "Inactive",
+                    "Active",
+                    "Background",
+                    "Suspended"
+        ]
+    },
+    {
+        "username": "movielover",
+        "password": "bestmovies",
+        "type": "Movies",
+        "items": ["Kill Bill",
+                    "Us",
+                    "Parasite",
+                    "Coco",
+                    "Inception"
+        ]
+    },
+]

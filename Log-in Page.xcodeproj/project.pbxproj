@@ -11,6 +11,15 @@
 		36A75D75266904DB009EE58C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D74266904DB009EE58C /* ContentView.swift */; };
 		36A75D77266904E1009EE58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D76266904E1009EE58C /* Assets.xcassets */; };
 		36A75D7A266904E1009EE58C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D79266904E1009EE58C /* Preview Assets.xcassets */; };
+		36A75D84266906BC009EE58C /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D83266906BC009EE58C /* userData.json */; };
+		36A75D862669130D009EE58C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D852669130D009EE58C /* LoginView.swift */; };
+		36A75D88266923B5009EE58C /* ShowPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D87266923B5009EE58C /* ShowPasswordButton.swift */; };
+		36A75D8A266923D0009EE58C /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D89266923D0009EE58C /* CustomButtonStyle.swift */; };
+		36A75D8C266923E2009EE58C /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D8B266923E2009EE58C /* UserImage.swift */; };
+		36A75D9026692D74009EE58C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D8F26692D74009EE58C /* UserModel.swift */; };
+		36A75D9226692EA4009EE58C /* UserModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D9126692EA4009EE58C /* UserModelData.swift */; };
+		36A75D9426694137009EE58C /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D9326694137009EE58C /* ReadMe.txt */; };
+		36A75D9626697021009EE58C /* evironmentObjectTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D9526697021009EE58C /* evironmentObjectTesting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		36A75D76266904E1009EE58C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A75D79266904E1009EE58C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36A75D7B266904E1009EE58C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A75D83266906BC009EE58C /* userData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
+		36A75D852669130D009EE58C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		36A75D87266923B5009EE58C /* ShowPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordButton.swift; sourceTree = "<group>"; };
+		36A75D89266923D0009EE58C /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		36A75D8B266923E2009EE58C /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
+		36A75D8F26692D74009EE58C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		36A75D9126692EA4009EE58C /* UserModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelData.swift; sourceTree = "<group>"; };
+		36A75D9326694137009EE58C /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		36A75D9526697021009EE58C /* evironmentObjectTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evironmentObjectTesting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +70,15 @@
 		36A75D71266904DB009EE58C /* Log-in Page */ = {
 			isa = PBXGroup;
 			children = (
+				36A75D8E26692D52009EE58C /* Model */,
 				36A75D72266904DB009EE58C /* Log_in_PageApp.swift */,
 				36A75D74266904DB009EE58C /* ContentView.swift */,
+				36A75D8D26692D38009EE58C /* Views */,
 				36A75D76266904E1009EE58C /* Assets.xcassets */,
 				36A75D7B266904E1009EE58C /* Info.plist */,
 				36A75D78266904E1009EE58C /* Preview Content */,
+				36A75D9326694137009EE58C /* ReadMe.txt */,
+				36A75D9526697021009EE58C /* evironmentObjectTesting.swift */,
 			);
 			path = "Log-in Page";
 			sourceTree = "<group>";
@@ -67,6 +89,27 @@
 				36A75D79266904E1009EE58C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36A75D8D26692D38009EE58C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36A75D852669130D009EE58C /* LoginView.swift */,
+				36A75D87266923B5009EE58C /* ShowPasswordButton.swift */,
+				36A75D89266923D0009EE58C /* CustomButtonStyle.swift */,
+				36A75D8B266923E2009EE58C /* UserImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36A75D8E26692D52009EE58C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36A75D83266906BC009EE58C /* userData.json */,
+				36A75D8F26692D74009EE58C /* UserModel.swift */,
+				36A75D9126692EA4009EE58C /* UserModelData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +169,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A75D84266906BC009EE58C /* userData.json in Resources */,
 				36A75D7A266904E1009EE58C /* Preview Assets.xcassets in Resources */,
+				36A75D9426694137009EE58C /* ReadMe.txt in Resources */,
 				36A75D77266904E1009EE58C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A75D9226692EA4009EE58C /* UserModelData.swift in Sources */,
+				36A75D862669130D009EE58C /* LoginView.swift in Sources */,
+				36A75D9026692D74009EE58C /* UserModel.swift in Sources */,
+				36A75D9626697021009EE58C /* evironmentObjectTesting.swift in Sources */,
 				36A75D75266904DB009EE58C /* ContentView.swift in Sources */,
+				36A75D8C266923E2009EE58C /* UserImage.swift in Sources */,
 				36A75D73266904DB009EE58C /* Log_in_PageApp.swift in Sources */,
+				36A75D88266923B5009EE58C /* ShowPasswordButton.swift in Sources */,
+				36A75D8A266923D0009EE58C /* CustomButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
