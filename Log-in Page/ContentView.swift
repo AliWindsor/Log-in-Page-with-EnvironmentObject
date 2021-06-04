@@ -7,24 +7,39 @@
 
 import SwiftUI
 
-/*
+
 struct ContentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State var userName:String = "user"
+    @State var userName:String = ""
     @State var userModelData = UserModelData()
+    var userInformation : UserModel?{
+        userModelData.userInformation.first { $0.username == userName }
+    }
     
     var body: some View {
         switch viewRouter.currentPage {
-        case .page:
-            LoginView(userName: $userName, userModelData: $userModelData)
+        
+            case .userDetailsPage:
+                UserDetailsView(userName: $userName, userModelData: $userModelData, userInformation: userInformation)
+                    .transition(.move(edge: .trailing))
+                
+            case .loginPage:
+                LoginView(userName: $userName, userModelData: $userModelData, userInformation: userInformation)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-   // @StateObject var viewRouter = ViewRouter()
     static var previews: some View {
-        ContentView().environmentObject(ViewRouter())
+        ContentView()
+           // .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+            //.previewDisplayName("iPhone 11")
+            .environmentObject(ViewRouter())
+        /*
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+            .previewDisplayName("iPhone 12 Pro Max")
+            .environmentObject(ViewRouter())*/
     }
-}*/
+}

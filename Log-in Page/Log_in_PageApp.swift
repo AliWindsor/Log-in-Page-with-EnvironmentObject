@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct Log_in_PageApp: App {
-    //@StateObject var viewRouter = ViewRouter()
+    @StateObject var viewRouter = ViewRouter()
     
     var body: some Scene {
         WindowGroup {
-            LoginView().environmentObject(ViewRouter())
+            ContentView().environmentObject(viewRouter)
         }
     }
 }
