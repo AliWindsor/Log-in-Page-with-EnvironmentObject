@@ -33,8 +33,11 @@ struct UserDetailsView: View {
                     }
                 }) {
                     CustomButtonStyle(buttonText: "Logout")
+                    
                 }
-          
+                
+                Spacer()
+                    .frame(height: 35)
         }
 
     }
