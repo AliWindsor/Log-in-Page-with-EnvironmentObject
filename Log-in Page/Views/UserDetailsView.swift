@@ -15,20 +15,18 @@ struct UserDetailsView: View {
      var userInformation : UserModel?
     
     var body: some View{
-       // NavigationView{
             VStack{
                
                 if let items = userInformation{
                     Text("\(items.username)'s \(items.type)")
                         .font(.title)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-      
-                    List(items.items, id: \.self){ item in
-                                Text(item)
-                    }
                     
-                  
+                    List(items.items, id: \.self){ item in
+                        Text(item)
+                    }
                 }
+               
                 Button(action: {
                     withAnimation {
                         viewRouter.currentPage = .loginPage
@@ -36,18 +34,8 @@ struct UserDetailsView: View {
                 }) {
                     CustomButtonStyle(buttonText: "Logout")
                 }
-       
-                /*NavigationLink(destination: ContentView()){
-                    CustomButtonStyle(buttonText: "Logout")
-                }*/
-                //.padding()
-                //.navigationBarHidden(true)
-           // }
-            //.navigationBarHidden(true)
           
         }
-        //.navigationBarBackButtonHidden(true)
-       // .navigationBarHidden(true)
-     
+
     }
 }

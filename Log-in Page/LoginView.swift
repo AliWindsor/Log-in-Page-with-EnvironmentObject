@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @Binding public var userName: String
+    @State public var userName: String = ""
     
     @State private var userPassword: String = ""
     @State private var errorMsg: String = ""
@@ -18,7 +18,7 @@ struct LoginView: View {
     @State private var showPassword: Bool = false
     @State private var authenticationPassed:Bool = false
     
-    @Binding var userModelData:UserModelData
+    @State var userModelData:UserModelData = UserModelData()
 
     var userInformation : UserModel? {
             userModelData.userInformation.first { $0.username == userName }
@@ -27,8 +27,16 @@ struct LoginView: View {
     @State var errorMsgColor = Color(red:220.0/255.0, green:0.0, blue:0.0)
   
     var body: some View {
- 
-   // NavigationView{
+        
+        switch viewRouter.currentPage {
+        
+            case .userDetailsPage:
+                UserDetailsView(userName: $userName, userModelData: $userModelData, userInformation: userInformation)
+                
+            case .loginPage:
+                EmptyView()
+        }
+
         VStack{
             Group{ //titles
                 Text("Welcome Back!")
@@ -37,11 +45,12 @@ struct LoginView: View {
                 
                 UserImage()
                 
-                Spacer()
-                    .frame(height: 25)
+                Text(errorMsg)
+                    .foregroundColor(errorMsgColor)
             }
             
             Group{ //inputs
+                
                 TextField("Username", text: $userName )
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 30.0)
@@ -90,7 +99,7 @@ struct LoginView: View {
                         errorMsg = "Success"
                         errorMsgColor = Color(red:0.0, green:200.0/255.0, blue:0.0)
                         viewRouter.currentPage = .userDetailsPage
-                        
+        
                     }
                 
                 }){
@@ -99,29 +108,15 @@ struct LoginView: View {
                 
                 Spacer()
                     .frame(height: 25)
-                
-                Text(errorMsg)
-                    .foregroundColor(errorMsgColor)
-                
-                /*NavigationLink(destination: UserDetailsView(userName: $userName, userModelData: $userModelData, userInformation: userInformation), isActive: $authenticationPassed){
-                    EmptyView()
-               }*/
             }
-            //.navigationBarHidden(true)
             
         }
-        //.navigationBarHidden(true)
         .padding()
-   // }
-   // .navigationBarHidden(true)
-   // .navigationBarBackButtonHidden(true)
-        
     }
 }
 
-/*
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView().environmentObject(ViewRouter())
     }
-}*/
+}

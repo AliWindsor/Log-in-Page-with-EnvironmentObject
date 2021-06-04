@@ -58,6 +58,7 @@
 		36A75D66266904DB009EE58C = {
 			isa = PBXGroup;
 			children = (
+				36A75D9326694137009EE58C /* ReadMe.txt */,
 				36A75D71266904DB009EE58C /* Log-in Page */,
 				36A75D70266904DB009EE58C /* Products */,
 			);
@@ -82,7 +83,6 @@
 				36A75D76266904E1009EE58C /* Assets.xcassets */,
 				36A75D7B266904E1009EE58C /* Info.plist */,
 				36A75D78266904E1009EE58C /* Preview Content */,
-				36A75D9326694137009EE58C /* ReadMe.txt */,
 				36A75D9526697021009EE58C /* EvironmentObjectTesting.swift */,
 				36A75D972669722E009EE58C /* ViewRouter.swift */,
 			);

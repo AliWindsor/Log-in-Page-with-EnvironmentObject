@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 struct ContentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
@@ -15,10 +16,8 @@ struct ContentView: View {
     
     var body: some View {
         switch viewRouter.currentPage {
-        case .loginPage:
+        case .page:
             LoginView(userName: $userName, userModelData: $userModelData)
-        case .userDetailsPage:
-            UserDetailsView(userName: $userName, userModelData: $userModelData)
         }
     }
 }
@@ -28,4 +27,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environmentObject(ViewRouter())
     }
-}
+}*/
