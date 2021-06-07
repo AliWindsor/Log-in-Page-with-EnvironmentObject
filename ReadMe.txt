@@ -1,4 +1,3 @@
-//
 //  ReadMe.txt
 //  Log-in Page
 //
@@ -21,4 +20,12 @@ helloworld: firstprogram
 movielover: bestmovies
 
 Each has a different list of items which is displayed depending on the account "logged-in".
+
+Frameworks used:
+- SwiftUI
+- Foundation
+- UIKit
+- Combine
+- WebKit
+- JSON Codable
 

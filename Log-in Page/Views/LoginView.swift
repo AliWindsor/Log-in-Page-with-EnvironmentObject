@@ -102,7 +102,7 @@ struct LoginView: View {
 
         .padding()
         .padding(.bottom, keyboardHeight)
-        .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0-200 }
+        .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0-300 }
     }
 }
 
@@ -112,7 +112,7 @@ extension Publishers {
             .map { $0.keyboardHeight }
         
         let willHide = NotificationCenter.default.publisher(for: UIApplication.keyboardWillHideNotification)
-            .map { _ in CGFloat(200) } //reset view after keyboard is gone
+            .map { _ in CGFloat(300) } //reset view after keyboard is gone
         
         return MergeMany(willShow, willHide)
             .eraseToAnyPublisher()
