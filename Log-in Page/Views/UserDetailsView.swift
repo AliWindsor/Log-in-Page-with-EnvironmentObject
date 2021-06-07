@@ -15,16 +15,17 @@ struct UserDetailsView: View {
      var userInformation : UserModel?
     
     var body: some View{
+        NavigationView{
             VStack{
                
                 if let items = userInformation{
-                    Text("\(items.username)'s \(items.type)")
-                        .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    
                     List(items.items, id: \.self){ item in
-                        Text(item)
+                        NavigationLink(destination: WebView(url:"https://www.ecosia.org/images?q=\(item)")){
+                            Text(item)
+                         
+                        }
                     }
+                    .navigationTitle(Text("\(items.username)'s \(items.type)"))
                 }
                
                 Button(action: {
@@ -38,7 +39,9 @@ struct UserDetailsView: View {
                 
                 Spacer()
                     .frame(height: 35)
-        }
+            }
+            
 
+        }
     }
 }

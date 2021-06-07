@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 
 struct ContentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
@@ -15,6 +15,10 @@ struct ContentView: View {
     @State var userModelData = UserModelData()
     var userInformation : UserModel?{
         userModelData.userInformation.first { $0.username == userName }
+    }
+    
+    init(){
+        UITableView.appearance().backgroundColor = .white
     }
     
     var body: some View {
