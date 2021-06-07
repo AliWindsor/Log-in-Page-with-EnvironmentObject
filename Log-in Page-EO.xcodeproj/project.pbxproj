@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		365E053A266E994C0004DF75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365E0539266E994C0004DF75 /* Assets.xcassets */; };
 		36A75D73266904DB009EE58C /* Log_in_PageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D72266904DB009EE58C /* Log_in_PageApp.swift */; };
 		36A75D75266904DB009EE58C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D74266904DB009EE58C /* ContentView.swift */; };
-		36A75D77266904E1009EE58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D76266904E1009EE58C /* Assets.xcassets */; };
 		36A75D7A266904E1009EE58C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D79266904E1009EE58C /* Preview Assets.xcassets */; };
 		36A75D84266906BC009EE58C /* userData.json in Resources */ = {isa = PBXBuildFile; fileRef = 36A75D83266906BC009EE58C /* userData.json */; };
 		36A75D862669130D009EE58C /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A75D852669130D009EE58C /* UserDetailsView.swift */; };
@@ -24,10 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		365E0539266E994C0004DF75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A75D6F266904DB009EE58C /* Log-in Page-EO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Log-in Page-EO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A75D72266904DB009EE58C /* Log_in_PageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log_in_PageApp.swift; sourceTree = "<group>"; };
 		36A75D74266904DB009EE58C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		36A75D76266904E1009EE58C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A75D79266904E1009EE58C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36A75D7B266904E1009EE58C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36A75D83266906BC009EE58C /* userData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userData.json; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 				36A75D8D26692D38009EE58C /* Views */,
 				36A75D8E26692D52009EE58C /* Model */,
 				369C0E00266A565900AFBDFA /* Helpers */,
-				36A75D76266904E1009EE58C /* Assets.xcassets */,
 				36A75D7B266904E1009EE58C /* Info.plist */,
+				365E0539266E994C0004DF75 /* Assets.xcassets */,
 				36A75D78266904E1009EE58C /* Preview Content */,
 			);
 			path = "Log-in Page";
@@ -182,8 +182,8 @@
 			files = (
 				36A75D84266906BC009EE58C /* userData.json in Resources */,
 				36A75D7A266904E1009EE58C /* Preview Assets.xcassets in Resources */,
+				365E053A266E994C0004DF75 /* Assets.xcassets in Resources */,
 				36A75D9426694137009EE58C /* ReadMe.txt in Resources */,
-				36A75D77266904E1009EE58C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

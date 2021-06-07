@@ -13,8 +13,13 @@ struct ShowPasswordButton: View{
     
     var body: some View{
         Button(action:{self.showPassword.toggle()}){
-            Text("Show Password")
+            if showPassword{
+                Text("Hide Password")
                 .foregroundColor(.gray)
+            }else{
+                Text("Show Password")
+                    .foregroundColor(.gray)
+            }
         }
         .padding()
     }
