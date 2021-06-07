@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct LoginView: View {
     @EnvironmentObject var viewRouter: ViewRouter
@@ -21,7 +22,8 @@ struct LoginView: View {
     @Binding var userModelData:UserModelData
     var userInformation : UserModel?
     
-    @State var errorMsgColor = Color(red:220.0/255.0, green:0.0, blue:0.0)
+    @State private var errorMsgColor = Color(red:220.0/255.0, green:0.0, blue:0.0)
+    @State private var keyboardHeight:CGFloat = 0
   
     var body: some View {
         VStack{
@@ -93,11 +95,34 @@ struct LoginView: View {
                 }
                 
                 Spacer()
-                    .frame(height: 25)
+                    .frame(height: 45)
             }
             
         }
 
         .padding()
+        .padding(.bottom, keyboardHeight)
+        .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0-200 }
     }
 }
+
+extension Publishers {
+    static var keyboardHeight: AnyPublisher<CGFloat, Never> {
+        let willShow = NotificationCenter.default.publisher(for: UIApplication.keyboardWillShowNotification)
+            .map { $0.keyboardHeight }
+        
+        let willHide = NotificationCenter.default.publisher(for: UIApplication.keyboardWillHideNotification)
+            .map { _ in CGFloat(200) } //reset view after keyboard is gone
+        
+        return MergeMany(willShow, willHide)
+            .eraseToAnyPublisher()
+    }
+}
+
+extension Notification {
+    var keyboardHeight: CGFloat {
+        return (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height ?? 0
+    }
+}
+
+
